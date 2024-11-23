@@ -4,7 +4,7 @@
 
 ## Description
 
-A Chrome Extension to provide quick access to localized `*.atlassian.com`:
+A Chrome Extension to provide quick access to the localized `*.atlassian.com` sites:
 
 * [www.atlassian.com/*](https://www.atlassian.com/) ←→ [www.atlassian.com/ja/*](https://www.atlassian.com/ja/)
 * [confluence.atlassian.com/*](https://confluence.atlassian.com/) ←→ [ja.confluence.atlassian.com/*](https://ja.confluence.atlassian.com/)
@@ -12,13 +12,12 @@ A Chrome Extension to provide quick access to localized `*.atlassian.com`:
 
 ## Installation
 
-1. Install the Chrome Extension at [**iAC - Chrome Web Store**](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github).
+1. Visit and install the Chrome Extension at [**iAC - Chrome Web Store**](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github).
 
 ## Prerequisite
 
-* Docker
-  * Verified with: `Docker version 19.03.5, build 633a0ea`
-* Node v12.x
+* Docker (for the release process only)
+* Node v20
 * Yarn v1.x
 
 ## Development
@@ -35,7 +34,7 @@ For the release:
 ./icac release
 ```
 
-Then you will get the crx zipfile in `./var`.
+Then you will get the crx zip file in `./var`.
 
 ## Project Links
 
@@ -46,7 +45,6 @@ Then you will get the crx zipfile in `./var`.
 ## Documents
 
 * CRX
-  * [Declare Permissions](https://developer.chrome.com/extensions/declare_permissions)
-  * [chrome\.i18n](https://developer.chrome.com/extensions/i18n)
+  * [Extensions / Develop  \|  Chrome for Developers](https://developer.chrome.com/docs/extensions/develop)
 * ImageMagick
   * [Text Handling \- IM v6](http://www.imagemagick.org/Usage/text/#label_bestfit)

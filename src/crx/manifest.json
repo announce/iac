@@ -1,7 +1,7 @@
 {
   "name": "iAC",
   "version": "",
-  "description": "To provide quick access to localized *.atlassian.com",
+  "description": "Provides quick access to the localized *.atlassian.com sites",
   "icons": {
     "16": "image/icon_16.png",
     "48": "image/icon_48.png",
@@ -9,12 +9,13 @@
   },
   "permissions": [
     "contextMenus",
-    "tabs",
-    "activeTab"
+    "tabs"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
-  "manifest_version": 2
+  "host_permissions": [
+    "*://*.atlassian.com/*"
+  ],
+  "manifest_version": 3
 }
