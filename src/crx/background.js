@@ -2,34 +2,18 @@
 const app = require('./app')
 
 /**
- * https://developer.chrome.com/apps/declare_permissions#manifest
- * https://developer.chrome.com/extensions/background_pages
- * https://developer.chrome.com/apps/contextMenus
- * https://developer.chrome.com/extensions/tabs#method-update
- * @param w
- * @param chrome
+ * https://developer.chrome.com/docs/extensions/reference/api/contextMenus
+ * https://developer.chrome.com/docs/extensions/reference/api/tabs
  */
-const main = (w, chrome) => {
-  const executeInActiveTab = (fn) => {
-    chrome.tabs.query({
-      active: true,
-      lastFocusedWindow: true
-    }, (tabs) => {
-      tabs.map(fn)
-    })
-  }
-
-  const redirect = (pageUrl) => {
-    const url = app.createRedirectionUrl(pageUrl)
+const main = () => {
+  const redirect = (pageUrl, tab) => {
+    const url = app.convertRedirectionUrl(pageUrl)
     if (url.href === pageUrl) {
-      console.log('Skipping redirection as target is the same to given URL:', url)
+      console.log('Skipping redirection as target is the same to the given URL:', url)
       return
     }
-    executeInActiveTab((tab) => {
-      console.log('tab:', tab)
-      chrome.tabs.update(tab.id, {
-        url: url.href
-      })
+    chrome.tabs.update(tab.id, {
+      url: url.href
     })
   }
 
@@ -42,12 +26,12 @@ const main = (w, chrome) => {
     })
   })
 
-  chrome.contextMenus.onClicked.addListener((info) => {
-    console.log('chrome.contextMenus.onClicked:', info)
+  chrome.contextMenus.onClicked.addListener((info, tab) => {
+    console.log('chrome.contextMenus.onClicked:', info, tab)
     if (info.menuItemId === app.scriptName && 'pageUrl' in info) {
-      return redirect(info.pageUrl)
+      return redirect(info.pageUrl, tab)
     }
   })
 }
 
-main(window, chrome)
+main()

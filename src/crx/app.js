@@ -10,10 +10,10 @@ const SAC_DOMAIN = 'support.atlassian.com'
 // @TODO Store prefix preference https://developer.chrome.com/extensions/options
 const PREFIX = 'ja'
 
-export const createRedirectionUrl = (pageUrl: string): URL => {
+export const convertRedirectionUrl = (pageUrl: string): URL => {
   let url = new URL(pageUrl)
   if (!supportedHost(url)) {
-    console.log(`[${scriptName}.createRedirectionUrl] unsupported host:`, url.host)
+    console.log(`[${scriptName}.convertRedirectionUrl] unsupported host:`, url.host)
     return url
   }
   switch (true) {
@@ -27,10 +27,10 @@ export const createRedirectionUrl = (pageUrl: string): URL => {
       url = convertSubdomain(url)
       break
     default:
-      console.warn(`[${scriptName}.createRedirectionUrl] unexpected host:`, url.host)
+      console.warn(`[${scriptName}.convertRedirectionUrl] unexpected host:`, url.host)
       break
   }
-  console.log(`[${scriptName}.createRedirectionUrl] result:`, url.href)
+  console.log(`[${scriptName}.convertRedirectionUrl] result:`, url.href)
   return url
 }
 
@@ -55,6 +55,6 @@ const convertSubdomain = (url: URL): URL => {
 }
 
 const supportedHost = (url: URL): boolean => {
-  console.log(`[${scriptName}.createRedirectionUrl] url.host.indexOf(TOP_DOMAIN):`, url.host.indexOf(TOP_DOMAIN))
+  console.log(`[${scriptName}.supportedHost] url.host.indexOf(TOP_DOMAIN):`, url.host.indexOf(TOP_DOMAIN))
   return (url.host.indexOf(TOP_DOMAIN) === url.host.length - TOP_DOMAIN.length)
 }
