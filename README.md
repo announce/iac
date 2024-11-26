@@ -10,6 +10,8 @@ A Chrome Extension to provide quick access to the localized `*.atlassian.com` si
 * [confluence.atlassian.com/*](https://confluence.atlassian.com/) ←→ [ja.confluence.atlassian.com/*](https://ja.confluence.atlassian.com/)
 * [support.atlassian.com/*](https://support.atlassian.com/) ←→ [support.atlassian.com/ja/*](https://support.atlassian.com/ja/)
 
+This extension was originally named "iCAC" because it only supported CAC (confluence.atlassian.com). It has now been renamed "iAC" to represent "internationalized atlassian.com", reflecting its expansion to include several other subdomains.
+
 ## Installation
 
 1. Visit and install the Chrome Extension at [**iAC - Chrome Web Store**](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github).
