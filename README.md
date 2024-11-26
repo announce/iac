@@ -1,6 +1,8 @@
-# IAC
+# iAC
 
-[![Build Status](https://travis-ci.org/announce/icac.svg?branch=master)](https://travis-ci.org/announce/icac)
+![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/plbhlfecmbmkphfgcpoijlidjapddidj)
+![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/plbhlfecmbmkphfgcpoijlidjapddidj)
+![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/plbhlfecmbmkphfgcpoijlidjapddidj)
 
 ## Description
 
@@ -14,7 +16,7 @@ This extension was originally named "iCAC" because it only supported CAC (conflu
 
 ## Installation
 
-1. Visit and install the Chrome Extension at [**iAC - Chrome Web Store**](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github).
+1. Visit and install the Chrome Extension via [**iAC - Chrome Web Store**](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github).
 
 ## Prerequisite
 
@@ -27,13 +29,13 @@ This extension was originally named "iCAC" because it only supported CAC (conflu
 Run the command below:
 
 ```bash
-./icac start
+./iac start
 ```
 
 For the release:
 
 ```bash
-./icac release
+./iac release
 ```
 
 Then you will get the crx zip file in `./var`.
