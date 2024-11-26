@@ -1,8 +1,8 @@
 # iAC
 
-![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/plbhlfecmbmkphfgcpoijlidjapddidj)
-![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/plbhlfecmbmkphfgcpoijlidjapddidj)
-![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/plbhlfecmbmkphfgcpoijlidjapddidj)
+[![Chrome Web Store Version](https://img.shields.io/chrome-web-store/v/plbhlfecmbmkphfgcpoijlidjapddidj)](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github)
+[![Chrome Web Store Last Updated](https://img.shields.io/chrome-web-store/last-updated/plbhlfecmbmkphfgcpoijlidjapddidj)](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github)
+[![Chrome Web Store Users](https://img.shields.io/chrome-web-store/users/plbhlfecmbmkphfgcpoijlidjapddidj)](https://chrome.google.com/webstore/detail/icac/plbhlfecmbmkphfgcpoijlidjapddidj?utm_source=github)
 
 ## Description
 
